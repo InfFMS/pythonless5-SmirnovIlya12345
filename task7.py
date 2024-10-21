@@ -4,3 +4,18 @@
 # Пример: ввод N = 6
 # [20, -90, 15, -34, 10, 0]
 # Вывод: [20, 15, 10, -90, -34, 0]
+from random import randint
+a=[]
+b=int(input())
+for i in range(b):
+    a.append(randint(-100,100))
+print(a)
+a1=[]
+a2=[]
+for i in range(b):
+    if a[i]>0:
+        a1.append(a[i])
+    else:
+        a2.append(a[i])
+a3=a1+a2
+print(a3)
