@@ -12,21 +12,14 @@ b=int(input())
 for i in range(b):
     a.append(randint(0, 1000))
 print(a)
+print(N)
+print(a[-1])
+b=a[::-1]
 print(b)
-print(a[b-1])
-c=[0]*b
-for i in range(b):
-    c[i]=a[-i-1]
-print(c)
-d=0
-for i in range(b):
-    if a[i]%111==0 and a[i]>0:
-        d+=1
-if d==0:
+c=[a[i] for a[i] in a if (a[i]%111==0 and a[i]!=0)]
+if c==[]:
     print("NO")
 else:
     print("YES")
-e=[0]*(b-2)
-for i in range(b-2):
-    e[i]=a[i+1]
-print(e)
+d=a[1:-1:1]
+print(d)
