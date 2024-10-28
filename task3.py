@@ -7,3 +7,17 @@
 # [1, 2, 3, 2, 5, 10]
 # Вывод:
 # значение:2 индексы 1 и 3
+from random import randint
+a=[]
+b=int(input())
+for i in range(b):
+    a.append(randint(0, 100))
+print(a)
+c=0
+for i in range(b-1):
+    for j in range(i+1, b):
+        if a[i]==a[j]:
+            print("Значение", a[i], ", индексы", i, "и", j)
+            c+=1
+if c==0:
+    print("Нет")
